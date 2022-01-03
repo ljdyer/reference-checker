@@ -150,13 +150,8 @@
 			let unstaggeredRanges = this.removeStaggeredRanges(ranges);
 			let boundaries = this.getBoundaries(unstaggeredRanges);
 			this.renderMarks(boundaries);
-			// Do stuff here
-			if (input == ""){
-				$('#num-warnings').text(WELCOME_MESSAGE)
-			} else{
-				numWarnings = $('.hwt-content mark').length
-				$('#num-warnings').text(`Total warnings: ${numWarnings}`)
-			}
+			console.log('Calling custom input handler.')
+			customInputHandler();
 		},
 
 		getRanges: function(input, highlight) {

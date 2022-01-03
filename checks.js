@@ -1,32 +1,37 @@
-var WELCOME_MESSAGE = "Paste your reference list into the box below."
-
 checks = {
-    "doubleSpace": {
-        "regex": "\\s\\s",
-        "class": "red"
-    },
     "leadingOrTrailingSpace": {
-        "regex": "\^\\s|\\s\$",
-        "class": "purple"
+        "regex": RegExp(/^\s|\n\s|\s\n|\s$/, "gm"),
+        "class": "purple",
+        "short-desc": "Leading/trailing space"
     },
     "spaceBetweenInitials": {
-        "regex": '\\w\\.\\s\\w\\.',
-        "class": "yellow"
+        "regex": RegExp(/\w\.\s+\w\./, "g"),
+        "class": "red",
+        "short-desc": "Space between initials"
+    },
+    "doubleSpace": {
+        "regex": RegExp(/\s\s/, "g"),
+        "class": "teal",
+        "short-desc": "Double space"
     },
     "missingAnd": {
-        "regex": '\(\?\<\!and\),\\s\?\\S\*,\[\^,\n\]\*\\(\\d\*\\)',
-        "class": 'blue'
+        "regex": RegExp(/(?<!and),\s?\S*,[^,\n]*(\d*)/, "g"),
+        "class": 'blue',
+        "short-desc": "Missing 'and'"
     },
     "missingCommaAfterSurname": {
-        'regex': '\\b\\w\*\\s\\S\\\.',
-        'class': 'pink'
+        'regex': RegExp(/\b\w+\s([A-Z]\.)+/, "g"),
+        'class': 'yellow',
+        "short-desc": "Missing comma after surname"
     },
     "doiInCaps": {
-        'regex': 'DOI|Doi',
-        'class': 'red'
+        'regex': RegExp(/DOI|Doi/, "m"),
+        'class': 'green',
+        "short-desc": "Capitalised 'doi'"
     },
     "periodAfterDoi": {
-        'regex': 'doi: \\S\*\\\.\(\?\!\\d\)',
-        'class': 'red'
+        'regex': RegExp(/doi: \S*\.(?!\d)/, "m"),
+        'class': 'pink',
+        "short-desc": "Full stop after doi"
     }
 }

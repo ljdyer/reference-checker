@@ -15,27 +15,39 @@
     outline-color: #495057;
 }
 
-.hwt-content mark {
+ {
     border-radius: 3px;
     background-color: #d0bfff;
 }
 
-.hwt-content mark.purple {
+.purple {
     background-color: #d0bfff;
 }
 
-.hwt-content mark.red {
+.red {
     background-color: #ffc9c9;
 }
 
-.hwt-content mark.blue {
+.teal {
+    background-color: #afc2a9;
+}
+
+.blue {
     background-color: #a3daff;
 }
 
-.hwt-content mark.yellow {
+.yellow {
     background-color: #ffec99;
 }
 
-.hwt-content mark.pink {
-    background-color: red
+.green {
+    background-color: #80e2c2;
+}
+
+.pink {
+    background-color: #ff8bd8;
+}
+
+.navy {
+    background-color: #9fabc4;
 }

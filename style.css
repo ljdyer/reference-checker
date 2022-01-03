@@ -11,25 +11,15 @@ body {
     background-color: #f1f3f5;
 }
 
-h1{
+h1 {
     margin: auto;
-}
-
-a {
-    display: inline-block;
-    margin-bottom: 5px;
-    padding: 10px 30px;
-    border-radius: 5px;
-    color: #f8f9fa;
-    background-color: #495057;
-    text-decoration: none;
 }
 
 section {
     margin-top: 60px;
 }
 
-textarea{
+textarea {
     text-align: left;
 }
 
@@ -38,4 +28,11 @@ code {
     font-family: 'Droid Sans Mono', sans-serif;
     font-size: 16px;
     background-color: #dee2e6;
+}
+
+.issue-type {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
 }

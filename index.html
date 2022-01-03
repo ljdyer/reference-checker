@@ -12,6 +12,7 @@
 		<link href="hwt-custom.css" rel="stylesheet">
 		<!-- General styles -->
 		<link href="style.css" rel="stylesheet">
+		<link href="tooltip.css" rel="stylesheet">
 		<!-- My JS -->
 		<script type="text/javascript" src="checks.js"></script>
 		<script type="text/javascript" src="main.js"></script>
@@ -22,8 +23,15 @@
 			<h1>Reference checker</h1>
 		</div>
 		<div style="text-align:center">
+			<p>Checks are based on my understanding of the University of Wolverhampton's "Cite Them Right Harvard" style of referencing as outlined <a href="https://www.wlv.ac.uk/lib/skills-for-learning/referencing/" target="_blank">here</a>.</p>
+		</div>
+		<div style="text-align:center">
 			<p id="num-warnings">Paste your reference list into the box below.</p>
 		</div>
-		<textarea style="height: 600px; width: 1000px" class="reference-list"></textarea>
+		<div style="text-align:center"><p id='issue-types'></p>
+		</div>
+		<div>
+		<textarea style="height: 600px; width: 1000px" class="reference-list" id="input-area"></textarea>
+		</div>
 	</body>
 </html>
