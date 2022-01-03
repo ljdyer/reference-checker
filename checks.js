@@ -1,6 +1,6 @@
 checks = {
     "leadingOrTrailingSpace": {
-        "regex": RegExp(/^\s|\n\s|\s\n|\s$/, "gm"),
+        "regex": RegExp(/^ |\n | \n| $/, "gm"),
         "class": "purple",
         "short-desc": "Leading/trailing space",
         "help": "You may have some spaces at the start or end of lines.<br>Consider removing."
@@ -12,13 +12,13 @@ checks = {
         "help": "'Quick start' guide available on University website has names with more than one initial with no spaces between initials<br>(e.g. Perkin, G.D.)."
     },
     "doubleSpace": {
-        "regex": RegExp(/\s\s/, "g"),
+        "regex": RegExp(/  /, "g"),
         "class": "teal",
         "short-desc": "Double space",
         "help": "You may have some double spaces in your reference list.<br>Consider removing."
     },
     "missingAnd": {
-        "regex": RegExp(/(?<!and),\s?\S*,[^,\n]*(\d*)/, "g"),
+        "regex": RegExp(/(?<!and) \S+,[^\n,]*\(\d{4}\)/, "gm"),
         "class": 'blue',
         "short-desc": "Missing 'and'",
         "help": "'Quick start' guide available on University website has 'and' before the last name in lists of names<br>(e.g. Ratnawati, V., Freddy, D. and Hardi, H.)"
