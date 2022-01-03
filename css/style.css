@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+img{
+    margin-left: 15px;
+    margin-right: 15px;
+    max-height: 35px
+}
 body {
     max-width: 1000px;
     margin: 40px auto;

@@ -12,7 +12,7 @@ checks = {
         "help": "'Quick start' guide available on University website has names with more than one initial with no spaces between initials<br>(e.g. Perkin, G.D.)."
     },
     "doubleSpace": {
-        "regex": RegExp(/  /, "g"),
+        "regex": RegExp(/  +/, "g"),
         "class": "teal",
         "short-desc": "Double space",
         "help": "You may have some double spaces in your reference list.<br>Consider removing."
@@ -30,19 +30,19 @@ checks = {
         "help": "A comma is required after each surname before the initials<br>(e.g. Watt, I.S.)"
     },
     "doiInCaps": {
-        'regex': RegExp(/DOI|Doi/, "m"),
+        'regex': RegExp(/DOI|Doi/, "g"),
         'class': 'green',
         "short-desc": "Capitalised 'doi'",
         'help': "'Quick start' guide available on University website has 'doi' in lowercase"
     },
     "fullStopAfterDoi": {
-        'regex': RegExp(/doi: \S*\.(?!\d)/, "m"),
+        'regex': RegExp(/doi: \S*\.(?!\d)/, "g"),
         'class': 'pink',
         "short-desc": "Full stop after doi",
         'help': "'Quick start' guide available on University website has no full stop at the end of lines ending with a DOI"
     },
     "serialComma": {
-        'regex': RegExp(/,\s?and/, "m"),
+        'regex': RegExp(/,\s?and/, "g"),
         'class': 'navy',
         'short-desc': 'Serial comma',
         'help': "'Quick start' guide available on University website has lists of three or more names without serial commas<br>(e.g. Ratnawati, V., Freddy, D. and Hardi, H.)."

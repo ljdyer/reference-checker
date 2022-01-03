@@ -1,8 +1,10 @@
 # Reference checker
 
-Try it at:
+Try it at: https://reference-checker.netlify.app/
 
-https://reference-checker.netlify.app/
+I will add more to this readme in the near future. In the meantime please check out the [demo video](https://youtu.be/UFPMFIrCqaw)!
+
+<a href="https://youtu.be/UFPMFIrCqaw"><img src="img/youtube-screenshot.png"></img></a>
 
 ## Credits
 
