@@ -150,7 +150,6 @@
 			let unstaggeredRanges = this.removeStaggeredRanges(ranges);
 			let boundaries = this.getBoundaries(unstaggeredRanges);
 			this.renderMarks(boundaries);
-			console.log('Calling custom input handler.')
 			customInputHandler();
 		},
 

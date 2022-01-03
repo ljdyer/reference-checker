@@ -15,6 +15,14 @@ h1 {
     margin: auto;
 }
 
+.danger {
+    color: #dc3545;
+}
+
+.safe {
+    color: #198754;
+}
+
 section {
     margin-top: 60px;
 }

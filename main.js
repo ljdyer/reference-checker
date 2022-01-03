@@ -1,6 +1,6 @@
 var WELCOME_MESSAGE = "Paste your reference list into the box below to check for potential issues."
 var NO_ISSUES_MESSAGE = "No issues were detected. But still be sure to carry out a thorough human check!"
-var WARNING_MESSAGE = "The following potential issues were detected:"
+var WARNING_MESSAGE = "Potential issues detected. Hover over issue types below for more information."
 
 highlightOptions = [];
 
@@ -17,7 +17,11 @@ issueTypes = []
 for (check in checks){
     thisCheck = checks[check]
     issueTypes.push(
-        $(`<div class="${thisCheck['class']} ${check} issue-type">${thisCheck['short-desc']}</div>`)
+        $(`<div class="${thisCheck['class']} ${check} issue-type">${thisCheck['short-desc']}
+            <span class="tooltiptext">
+                ${thisCheck['help']}
+            </span>
+        </div>`)
     )
 }
 
@@ -27,6 +31,7 @@ function customInputHandler(){
     // If nothing in input box, display welcome message
     let input = $('#input-area').val()
     if (input == "") {
+        $('#num-warnings').removeClass()
         $('#num-warnings').text(WELCOME_MESSAGE)
     }
     // Otherwise, check for issues
@@ -40,9 +45,12 @@ function customInputHandler(){
         })
         // If no issues, found, display OK message
         if (issuesPresent.length == 0){
+            $('#num-warnings').removeClass()
+            $('#num-warnings').addClass('safe')
             $('#num-warnings').text(NO_ISSUES_MESSAGE)
         }
         else{
+            $('#num-warnings').addClass('danger')
             $('#num-warnings').text(WARNING_MESSAGE)
             for (check in checks) {
                 if (issuesPresent.includes(check)) {
@@ -60,5 +68,5 @@ $(document).ready(function () {
     for (issueType in issueTypes){
         $('#issue-types').append(issueTypes[issueType])
     }
-    $('.issue-type').hide()
+    customInputHandler();
 });
