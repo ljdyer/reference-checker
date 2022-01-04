@@ -3,26 +3,33 @@ var NO_ISSUES_MESSAGE = "No issues were detected. But still be sure to carry out
 var WARNING_MESSAGE = "Potential issues detected. Hover over issue types below for more information."
 
 highlightOptions = [];
-
-for (check in checks){
-    thisCheck = checks[check]
-    highlightOptions.push({
-        highlight: thisCheck['regex'],
-        className: thisCheck['class'] + ' ' + check
-    })
-}
-
 issueTypes = []
 
-for (check in checks){
-    thisCheck = checks[check]
-    issueTypes.push(
-        $(`<div class="${thisCheck['class']} ${check} issue-type">${thisCheck['short-desc']}
-            <span class="tooltiptext">
-                ${thisCheck['help']}
-            </span>
-        </div>`)
-    )
+/* Generate options object for highlight-within-textarea plugin from check data in checks.js */
+function generateOptions(){
+        for (check in checks){
+        thisCheck = checks[check]
+        highlightOptions.push({
+            highlight: thisCheck['regex'],
+            className: thisCheck['class'] + ' ' + check
+        })
+    }
+}
+
+/* Generate issue type display */
+function createIssueTypes(){
+    for (check in checks){
+        thisCheck = checks[check] 
+        thisIssue = $(`<div class="${thisCheck['class']} ${check} issue-type">
+                            ${thisCheck['short-desc']}
+                            <span class="tooltiptext">
+                                ${thisCheck['help']}
+                            </span>
+                        </div>`)
+        $('#issue-types').append(thisIssue)
+        // Hide all for now
+        $('.issue-type').hide()
+    }
 }
 
 function customInputHandler(){
@@ -62,11 +69,13 @@ function customInputHandler(){
 }
 
 $(document).ready(function () {
+    // Initialize textarea highlighting using highlight-within-textarea plugin
+    generateOptions();
     $('.reference-list').highlightWithinTextarea({
         highlight: highlightOptions
     }); 
-    for (issueType in issueTypes){
-        $('#issue-types').append(issueTypes[issueType])
-    }
+    // Initialize issue display
+    createIssueTypes();
+    // Update issue display
     customInputHandler();
 });
