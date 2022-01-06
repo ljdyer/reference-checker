@@ -19,6 +19,8 @@
     border-radius: 3px;
 }
 
+/* Pastel colors generated at https://mdigi.tools/random-pastel-color/ */
+
 .purple {
     background-color: #d0bfff;
 }
@@ -49,4 +51,20 @@
 
 .navy {
     background-color: #9fabc4;
+}
+
+.maroon {
+    background-color: #c3879d;
+}
+
+.beige {
+    background-color: #f2ebd5;
+}
+
+.brown {
+    background-color: #d2b081
+}
+
+.orange {
+    background-color: #e79c8b;
 }

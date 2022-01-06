@@ -18,7 +18,7 @@ checks = {
         "help": "You may have some double spaces in your reference list.<br>Consider removing."
     },
     "missingAnd": {
-        "regex": RegExp(/(?<!and) \S+,[^\n,]*\(\d{4}\)/, "gm"),
+        "regex": RegExp(/(?<!and) \S+,[^\n,]*\(\d{4}\)/, "g"),
         "class": 'blue',
         "short-desc": "Missing 'and'",
         "help": "'Quick start' guide available on University website has 'and' before the last name in lists of names<br>(e.g. Ratnawati, V., Freddy, D. and Hardi, H.)"
@@ -46,5 +46,12 @@ checks = {
         'class': 'navy',
         'short-desc': 'Serial comma',
         'help': "'Quick start' guide available on University website has lists of three or more names without serial commas<br>(e.g. Ratnawati, V., Freddy, D. and Hardi, H.)."
+    },
+    "etAl": {
+        'regex': RegExp(/[Ee][Tt] [Aa][Ll]/, "g"),
+        'class': 'maroon',
+        'short-desc': 'Et al.',
+        'help': "'Et al. belongs in in-text citations. Authors should be listed in full in the list of references."
     }
+    // TODO: Add check for missing comma between names
 }
