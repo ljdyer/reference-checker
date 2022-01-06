@@ -9,7 +9,7 @@ checks = {
         "regex": RegExp(/\w\.\s+\w\./, "g"),
         "class": "red",
         "short-desc": "Space between initials",
-        "help": "'Quick start' guide available on University website has names with more than one initial with no spaces between initials<br>(e.g. Perkin, G.D.)."
+        "help": "Quick Start Guide available on University website has names with more than one initial with no spaces between initials<br>(e.g. Perkin, G.D.)."
     },
     "doubleSpace": {
         "regex": RegExp(/  +/, "g"),
@@ -18,10 +18,10 @@ checks = {
         "help": "You may have some double spaces in your reference list.<br>Consider removing."
     },
     "missingAnd": {
-        "regex": RegExp(/(?<!and) \S+,[^\n,]*\(\d{4}\)/, "g"),
+        "regex": RegExp(/(?<!and) \S+,[^\n,]*\(\d{4}/, "g"),
         "class": 'blue',
         "short-desc": "Missing 'and'",
-        "help": "'Quick start' guide available on University website has 'and' before the last name in lists of names<br>(e.g. Ratnawati, V., Freddy, D. and Hardi, H.)"
+        "help": "Quick Start Guide available on University website has 'and' before the last name in lists of names<br>(e.g. Ratnawati, V., Freddy, D. and Hardi, H.)"
     },
     "missingCommaAfterSurname": {
         'regex': RegExp(/\b\w+\s([A-Z]\.)+/, "g"),
@@ -33,25 +33,25 @@ checks = {
         'regex': RegExp(/DOI|Doi/, "g"),
         'class': 'green',
         "short-desc": "Capitalised 'doi'",
-        'help': "'Quick start' guide available on University website has 'doi' in lowercase"
+        'help': "Quick Start Guide available on University website has 'doi' in lowercase"
     },
     "fullStopAfterDoi": {
         'regex': RegExp(/doi: \S*\.(?!\d)/, "g"),
         'class': 'pink',
         "short-desc": "Full stop after doi",
-        'help': "'Quick start' guide available on University website has no full stop at the end of lines ending with a DOI"
+        'help': "Quick Start Guide available on University website has no full stop at the end of lines ending with a DOI"
     },
     "serialComma": {
         'regex': RegExp(/,\s?and/, "g"),
         'class': 'navy',
         'short-desc': 'Serial comma',
-        'help': "'Quick start' guide available on University website has lists of three or more names without serial commas<br>(e.g. Ratnawati, V., Freddy, D. and Hardi, H.)."
+        'help': "Quick Start Guide available on University website has lists of three or more names without serial commas<br>(e.g. Ratnawati, V., Freddy, D. and Hardi, H.)."
     },
     "etAl": {
         'regex': RegExp(/[Ee][Tt] [Aa][Ll]/, "g"),
         'class': 'maroon',
         'short-desc': 'Et al.',
-        'help': "'Et al. belongs in in-text citations. Authors should be listed in full in the list of references."
+        'help': "'Et al.' belongs in in-text citations. Authors should be listed in full in the list of references."
     }
     // TODO: Add check for missing comma between names
 }

@@ -52,11 +52,12 @@ function customInputHandler(){
         })
         // If no issues, found, display OK message
         if (issuesPresent.length == 0){
-            $('#num-warnings').removeClass()
+            $('#num-warnings').removeClass('danger')
             $('#num-warnings').addClass('safe')
             $('#num-warnings').text(NO_ISSUES_MESSAGE)
         }
         else{
+            $('#num-warnings').removeClass('safe')
             $('#num-warnings').addClass('danger')
             $('#num-warnings').text(WARNING_MESSAGE)
             for (check in checks) {
