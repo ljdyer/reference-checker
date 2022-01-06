@@ -8,11 +8,9 @@ Paste your list of references into the text area displayed and read the advice d
 
 If there are any potential errors, you are recommended to make any necessary changes in the file containing your essay and paste the references into the tool again after editing to confirm that all necessary changes have been made correctly. There may of course be 'false positives' which can be ignored just like for any proofing tool.
 
-See below for the full list of checks.
+Click on the demo video link below to see it in action, or keep scrolling down to see the full list of checks.
 
-<a href="https://youtu.be/UFPMFIrCqaw">Demo video:</a>
-
-<a href="https://youtu.be/UFPMFIrCqaw"><img src="site/img/youtube-screenshot.png"></img></a>
+<a href="https://www.youtube.com/watch?v=xjoTKWqrL28"><img src="site/img/youtube-screenshot.png"></img></a>
 
 ## List of checks
 
